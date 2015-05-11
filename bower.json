@@ -1,0 +1,17 @@
+{
+  "name": "travelMap",
+  "version": "0.1.0",
+  "main": "travelmap.min.js",
+  "ignore": [
+    ".git",
+    "**/*.txt",
+    ".settings",
+    "node_modules",
+    ".gitattributes",
+    ".gitignore",
+    "karma.conf.js"
+  ],
+  "dependencies": {
+    "gmaps": "~0.4.17"
+  }
+}
