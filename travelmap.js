@@ -15,7 +15,11 @@
     stops: [],
     currentStop: 0,
     selector: "#map",
-    iconUrl: "http://wildermuth.com/",
+    icon: {
+      url: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAIAAABvrngfAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAadEVYdFNvZnR3YXJlAFBhaW50Lk5FVCB2My41LjExR/NCNwAAAA1JREFUGFdjoDNgYAAAAHIAAejt7scAAAAASUVORK5CYII=",
+      width: 3,
+      height: 3,
+    },
     initialZoom: 4,
     pastStroke: {
       color: '#190300',
@@ -26,6 +30,12 @@
       color: '#D30000',
       opacity: 0.6,
       weight: 2
+    },
+    mapOptions: {
+      draggable: true,
+      scrollwheel: false,
+      disableDoubleClickZoom: true,
+      zoomControl: true
     }
   };
 
@@ -58,12 +68,7 @@
       zoom: settings.initialZoom
     });
 
-    map.map.setOptions({
-      draggable: true,
-      scrollwheel: false,
-      disableDoubleClickZoom: true,
-      zoomControl: true
-    });
+    map.map.setOptions(settings.mapOptions);
 
     // Past Lines
     map.drawPolyline({
@@ -87,9 +92,9 @@
         map.addMarker({
           lat: stop.lat,
           lng: stop.long,
-          icon: settings.iconUrl,
+          icon: settings.icon.url,
           infoWindow: { content: stop.info },
-          anchorPoint: { x: 3, y: 3 }
+          anchorPoint: { x: settings.icon.width/2, y: settings.icon.height/2 }
         });
       }
     }
