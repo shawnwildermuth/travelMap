@@ -1,6 +1,6 @@
 {
   "name": "travelmap",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Extension to GMaps to create a map of a trip.",
   "main": "travelmap.js",
   "directories": {
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/shawnwildermuth/TravelMapJs"
+    "url": "https://github.com/shawnwildermuth/travelmap"
   },
   "keywords": [
     "Gmaps"
@@ -31,10 +31,10 @@
     }
   ],
   "bugs": {
-    "url": "https://github.com/shawnwildermuth/TravelMapJs/issues"
+    "url": "https://github.com/shawnwildermuth/travelmap/issues"
   },
   "readme": "readme.md",
-  "homepage": "https://github.com/shawnwildermuth/TravelMapJs",
+  "homepage": "https://github.com/shawnwildermuth/travelmap",
   "devDependencies": {
     "gulp": "^3.8.11",
     "gulp-jshint": "^1.10.0",

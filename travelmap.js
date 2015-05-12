@@ -1,7 +1,8 @@
 ﻿//! travelmap.js
-//! version : 0.01.0
+//! version : 1.0.1
 //! authors : Shawn Wildermuth
 //! license : MIT
+//! repo    : https://github.com/shawnwildermuth/travelmap
 
 // Build support for AMD or simple global (borrowed pattern from moment.js)
 (function () {
