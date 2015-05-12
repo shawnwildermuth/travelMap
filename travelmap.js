@@ -12,26 +12,26 @@
   var _travelMap = {};
 
   var _defaultOptions = {
-    stops: [],
-    currentStop: 0,
-    selector: "#map",
-    icon: {
+    stops: [],        // Array of the stops to show (required)
+    currentStop: 0,   // Ordinal Position of current location
+    selector: "#map", // CSS Selector for container for the map
+    icon: {           // Icon details
       url: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAIAAABvrngfAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAadEVYdFNvZnR3YXJlAFBhaW50Lk5FVCB2My41LjExR/NCNwAAAA1JREFUGFdjoDNgYAAAAHIAAejt7scAAAAASUVORK5CYII=",
       width: 3,
       height: 3,
     },
-    initialZoom: 4,
-    pastStroke: {
-      color: '#190300',
+    initialZoom: 4,   // Initial Level of Zoom for the Google Map
+    pastStroke: {     // Settings for the lines before the currentStop
+      color: '#190300', 
       opacity: 0.5,
       weight: 2
     },
-    futureStroke: {
+    futureStroke: {   // Settings for hte lines after the currentStop
       color: '#D30000',
       opacity: 0.6,
       weight: 2
     },
-    mapOptions: {
+    mapOptions: {     // Options for map (See GMaps for full list of options)
       draggable: true,
       scrollwheel: false,
       disableDoubleClickZoom: true,
