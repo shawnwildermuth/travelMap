@@ -17,7 +17,7 @@ You can either download the travelmap.js (or min.js) or you can just use bower t
 ```
 ## Dependencies
 
-This project depends on [GMaps](GMaps) and the Google Maps API. The bower package installs the GMaps project as a dependency already. It does not require any other libraries (e.g. no jQuery). It shouldn't have any problems working with any libraries as far as I know.
+This project depends on [GMaps](https://github.com/hpneo/gmaps) and the Google Maps API. The bower package installs the GMaps project as a dependency already. It does not require any other libraries (e.g. no jQuery). It shouldn't have any problems working with any libraries as far as I know.
 
 ## Simple Usage
 
@@ -27,7 +27,7 @@ Before you can use the library, you need to include the Google API and GMaps lib
 <script src="http://maps.google.com/maps/api/js?sensor=true" type="text/javascript" ></script>
 <script src="/bower_components/gmaps/gmaps.js" type="text/javascript" ></script>
 <script src="/bower_components/travelmap/travelmap.js" type="text/javascript" ></script>
-// Your Script GOes Here
+// Your Script Goes Here
 ```
 
 Once you have the scripts, it's usage is simply calling createMap and specifying the stops and selector:
