@@ -1,5 +1,5 @@
 ﻿//! travelmap.js
-//! version : 1.0.1
+//! version : 1.0.2
 //! authors : Shawn Wildermuth
 //! license : MIT
 //! repo    : https://github.com/shawnwildermuth/travelmap
@@ -37,6 +37,9 @@
       scrollwheel: false,
       disableDoubleClickZoom: true,
       zoomControl: true
+    },
+    overlay: {
+      className: "travelmap-overlay"
     }
   };
 
@@ -103,7 +106,7 @@
     map.drawOverlay({
       lat: currentLocation.lat,
       lng: currentLocation.long,
-      content: '<div class="overlay">Current Location<br/>' + currentLocation.info + '<div class="overlay_arrow above"></div></div>',
+      content: '<div class="' + settings.overlay.className + '">Current Location<br/>' + currentLocation.info + '<div class="' + settings.overlay.className + '-arrow ' + settings.overlay.className + '-arrow-above"></div></div>',
       verticalAlign: 'top',
       horizontalAlign: 'center',
       layer: "overlayImage"
@@ -133,9 +136,46 @@
 
     var stopStyle = ".stopName { background: none repeat scroll 0 0 #222; width: 4px; height: 4px; }" +
       ".gm-style-iw{ overflow: hidden !important; }";
+      
+    var overlayStyle = " .travelmap-overlay{" +
+"  display:block;" +
+"  text-align:center;" +
+"  color:#fff;" +
+"  font-size:12px;" +
+"  line-height:14px;" +
+"  opacity:0.8;" +
+"  background:#4477aa;" +
+"  border:solid 3px #336699;" +
+"  border-radius:4px;" +
+"  box-shadow:2px 2px 10px #333;" +
+"  text-shadow:1px 1px 1px #666;" +
+"  padding:0 4px;" +
+"  margin-top: -24px;" +
+"  white-space: nowrap;" +
+"}" +
+
+".travelmap-overlay-arrow{" +
+"  left:50%;" +
+"  margin-left:-16px;" +
+"  width:0;" +
+"  height:0;" +
+"  position:absolute;" +
+"}" +
+".travelmap-overlay-arrow.travelmap-overlay-arrow-above{" +
+"  bottom:-15px;" +
+"  border-left:16px solid transparent;" +
+"  border-right:16px solid transparent;" +
+"  border-top:16px solid #336699;" +
+"}" +
+".travelmap-overlay-arrow.travelmap-overlay-arrow-below{" +
+"  top:-15px;" +
+"  border-left:16px solid transparent;" +
+"  border-right:16px solid transparent;" +
+"  border-bottom:16px solid #336699;" +
+"}";
 
     var style = document.createElement("style");
-    style.innerHTML = stopStyle;
+    style.innerHTML = stopStyle + overlayStyle;
     document.head.appendChild(style);
   };
 
